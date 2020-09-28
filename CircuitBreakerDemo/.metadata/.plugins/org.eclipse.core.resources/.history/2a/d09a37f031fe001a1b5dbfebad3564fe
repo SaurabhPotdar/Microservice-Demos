@@ -1,0 +1,5 @@
+package com.cg.productservicecatalog.dto;
+
+public class Product {
+
+}
