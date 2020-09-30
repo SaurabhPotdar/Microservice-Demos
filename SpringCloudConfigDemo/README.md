@@ -1,3 +1,5 @@
-http://localhost:8888/app-name/profile-name
+###To view profiles
 
-eg: http://localhost:8888/config-client/default
+[http://localhost:8888/app-name/profile-name]()
+
+eg: [http://localhost:8888/config-client/default]()
