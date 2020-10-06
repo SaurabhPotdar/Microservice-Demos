@@ -8,11 +8,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controller {
 
 	@Value("${app.property}")
-	private String message;
+	private String propertyFromConfigClient;
+	
+	@Value("${db.connection}")
+	private String commonPropertyFromConfigServer;
 	
 	@RequestMapping
 	public String getProperty() {
-		return message;
+		System.out.println(commonPropertyFromConfigServer + "\n" + propertyFromConfigClient);
+		return commonPropertyFromConfigServer + "\n" + propertyFromConfigClient;
 	}
 	
 }
