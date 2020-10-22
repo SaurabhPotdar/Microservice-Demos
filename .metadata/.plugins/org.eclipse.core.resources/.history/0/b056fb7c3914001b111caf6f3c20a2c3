@@ -16,21 +16,11 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 @RequestMapping("/products")
 public class ProductController {
 	
-	//Hardcoded top 3 products
 	List<Product> topThree = new ArrayList<>(
 		Arrays.asList(new Product[] {
 			new Product("TV", "Samsung"),
 			new Product("Mobile", "Apple"),
 			new Product("Washing Machine", "LG"),
-		})
-	);
-	
-	//Hardcoded fallback response
-	List<Product> topThreeGeneric = new ArrayList<>(
-		Arrays.asList(new Product[] {
-			new Product("TV", "Generic Brand"),
-			new Product("Mobile", "Generic Brand"),
-			new Product("Washing Machine", "Generic Brand"),
 		})
 	);
 	
@@ -51,6 +41,8 @@ public class ProductController {
 	}
 	
 	public List<Product> getTop3Fallback(){
+		//Hardcoded fallback response
+		
 		return topThreeGeneric;
 	}
 	
