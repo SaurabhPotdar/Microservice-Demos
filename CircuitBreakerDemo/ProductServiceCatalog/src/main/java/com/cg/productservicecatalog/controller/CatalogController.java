@@ -21,7 +21,7 @@ public class CatalogController {
 	@RequestMapping("")
 	public List<Product> getTop3(){
 		//Get response from ProductService
-		ResponseEntity<Product[]> response = restTemplate.getForEntity("http://localhost:8081/products/get",Product[].class);
+		ResponseEntity<Product[]> response = restTemplate.getForEntity("http://product-service/products/get",Product[].class);
 		Product[] products = response.getBody();
 		return Arrays.asList(products);
 	}
