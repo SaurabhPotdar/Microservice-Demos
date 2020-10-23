@@ -16,7 +16,7 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 @RequestMapping("/products")
 public class ProductController {
 	
-	//Hardcoded top 3 products
+	//Hardcoded response
 	List<Product> topThree = new ArrayList<>(
 		Arrays.asList(new Product[] {
 			new Product("TV", "Samsung"),
