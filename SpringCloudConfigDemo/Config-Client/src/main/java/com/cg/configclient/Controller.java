@@ -15,7 +15,7 @@ public class Controller {
 	
 	@RequestMapping
 	public String getProperty() {
-		System.out.println(commonPropertyFromConfigServer + "\n" + propertyFromConfigClient);
+		//System.out.println(commonPropertyFromConfigServer + "\n" + propertyFromConfigClient);
 		return commonPropertyFromConfigServer + "\n" + propertyFromConfigClient;
 	}
 	
