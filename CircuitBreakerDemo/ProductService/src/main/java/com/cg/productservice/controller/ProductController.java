@@ -45,7 +45,7 @@ public class ProductController {
 		@HystrixProperty(name = "circuitBreaker.errorThresholdPercentage", value = "50"),
 		@HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds", value = "5000"), })
 	public List<Product> getTop3Products(){
-		//Simulate delay
+		//Simulate delay, 33.33% chance that we will get a timeout.
 		simulateDelay();
 		return topThree;
 	}
