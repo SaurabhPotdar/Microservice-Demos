@@ -1,2 +1,6 @@
 Feign with Hystrix
 https://nphumbert.github.io/blog/2017/07/23/setup-a-circuit-breaker-with-hystrix/
+
+We can use Ribbon for load balancing and we can customize health checks, load balancing algorithm etc.
+But if we use Eureka with Ribbon, then Eureka will override Ribbon's health checks.
+List of servers, health checks is performed by Eureka for Ribbon.
