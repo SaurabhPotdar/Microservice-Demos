@@ -1,0 +1,2 @@
+Feign with Hystrix
+https://nphumbert.github.io/blog/2017/07/23/setup-a-circuit-breaker-with-hystrix/
