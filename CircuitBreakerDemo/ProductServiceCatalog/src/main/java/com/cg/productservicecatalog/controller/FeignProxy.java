@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import com.cg.productservicecatalog.dto.Product;
 
-@FeignClient(name="product-service")
+@FeignClient(name="product-service", fallback = FeignProxyFallback.class)
 public interface FeignProxy {
 	
 	@GetMapping("/products/get")
