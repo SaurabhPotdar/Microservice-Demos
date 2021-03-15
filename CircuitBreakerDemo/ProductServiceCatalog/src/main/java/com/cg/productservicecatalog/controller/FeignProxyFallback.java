@@ -11,6 +11,7 @@ import com.cg.productservicecatalog.dto.Product;
 @Component
 public class FeignProxyFallback implements FeignProxy {
 
+	//Fallback for get() in interface
 	@Override
 	public List<Product> get() {
 		return new ArrayList<>(Arrays.asList( new Product[] { 
