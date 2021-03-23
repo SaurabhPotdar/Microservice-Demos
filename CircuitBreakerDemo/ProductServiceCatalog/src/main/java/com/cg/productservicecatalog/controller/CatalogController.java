@@ -1,6 +1,5 @@
 package com.cg.productservicecatalog.controller;
 
-import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,11 +22,10 @@ public class CatalogController {
 	FeignProxy feignProxy;
 	
 	@RequestMapping("/get")
-	public List<Product> getTop3(){
+	public ResponseEntity<Product[]> getTop3(){
 		//Get response from ProductService
 		ResponseEntity<Product[]> response = restTemplate.getForEntity("http://product-service/products/get",Product[].class);
-		Product[] products = response.getBody();
-		return Arrays.asList(products);
+		return response;
 	}
 	
 	@GetMapping("/feign")
